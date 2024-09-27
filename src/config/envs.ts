@@ -10,7 +10,9 @@ const envsSchema = joi
     PORT: joi.number().required(),
   })
   .unknown(true);
+
 const { error, value } = envsSchema.validate(process.env);
+
 if (error) {
   throw new Error(`Config Validation Error: ${error.message}`);
 }
