@@ -5,7 +5,7 @@ import { envs } from './config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const logger = new Logger('Bootstrap');
+  const logger = new Logger('ProductsMS-main');
 
   app.setGlobalPrefix('api');
 
