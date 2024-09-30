@@ -15,7 +15,19 @@
 npx prisma migrate dev
 ```
 
-5. Ejecutar
+5. Si no está ejecutandose, Levanatar el servidor de Nats
+
+```
+docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
+```
+
+6. Verificar servidor corriendo:
+
+```
+http://localhost:8222/
+```
+
+7. Ejecutar
 
 ```
 npm run start:dev
